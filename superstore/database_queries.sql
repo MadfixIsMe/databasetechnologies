@@ -32,3 +32,9 @@ SELECT  c.customer_name, COUNT(o.order_id) AS pocet_objednavok
 FROM customers c
 LEFT JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.customer_name;
+
+SELECT p.category, AVG(o.discount) AS priem_zlava
+FROM products p
+JOIN orders o ON p.product_id = o.product_id
+GROUP BY p.category;
+--test SELECT category FROM products;
