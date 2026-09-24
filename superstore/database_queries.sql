@@ -65,3 +65,12 @@ SELECT c.region, COUNT(CASE WHEN o.sales > 1000 THEN 1 END) AS high_value, COUNT
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.region;
+
+--úloha 13
+SELECT c.customer_name, SUM(o.sales) AS celk_hodnota, AVG(o.discount) AS priem_zlava, COUNT(o.order_id) AS pocet_objednavok,
+CASE WHEN SUM(o.sales) > 2500 THEN 'VIP' ELSE 'REGULAR' END AS typ_zakaznika
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_name
+ORDER BY celk_hodnota DESC;
+
