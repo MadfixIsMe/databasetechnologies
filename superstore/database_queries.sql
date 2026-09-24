@@ -53,3 +53,10 @@ FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 GROUP BY c.customer_name
 HAVING SUM(o.sales) > 2000;
+
+--úloha 11
+SELECT c.region, SUM(o.sales) AS celk_hodnota, AVG(o.discount) AS priem_zlava, COUNT(o.order_id) AS pocet_objednavok
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.region;
+
