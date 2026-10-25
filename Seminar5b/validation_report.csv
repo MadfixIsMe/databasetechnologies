@@ -1,0 +1,12 @@
+Typ problému,Počet chybných riadkov
+Neplatné OrderID,0
+Duplicitné OrderID,22
+Neplatný Region,42
+Chýbajúci Product,0
+Neplatné Quantity,24
+Neplatný SalesAmount,38
+Neplatný Discount,177
+Neplatný OrderDate,17
+Neplatný DeliveryDate,10
+Delivery pred objednávkou,15
+Neplatný telefón,34
